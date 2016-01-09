@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1452345970 source:n:\namskeid\gagnaskipan\2016-t-201-gski\fyrirlestrar\adt\set\main.cpp
+	<iostream>
+	"set.h"
+
+1452345847 n:\namskeid\gagnaskipan\2016-t-201-gski\fyrirlestrar\adt\set\set.h
+	<iostream>
+	<vector>
+
