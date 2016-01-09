@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1452329641 source:n:\namskeid\gagnaskipan\fyrirlestrar\2016\month\month.cpp
+	"month.h"
+
+1452329641 n:\namskeid\gagnaskipan\fyrirlestrar\2016\month\month.h
+	<iostream>
+
+1451919487 source:n:\namskeid\gagnaskipan\fyrirlestrar\2016\month\main.cpp
+	<iostream>
+	"month.h"
+

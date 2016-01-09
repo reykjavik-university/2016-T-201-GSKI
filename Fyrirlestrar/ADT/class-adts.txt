@@ -1,0 +1,27 @@
+Hvað er gagnatag?
+	A data type consists of a collection of values together with a set of basic operations defined on the values
+
+Hvað er hugrænt gagnatag?
+	A data type is an Abstract Data Type (ADT) if programmers using the type do not have access to the details of how the values and operations are implemented.
+	Styður við hjúpun og upplýsingahuld.
+
+Eru innbyggð hugræn gagnatög í C++?
+	bool.	Gildi: true og false. Aðgerðir: and, or, not
+	int. 	Gildi: heiltölur á milli MIN og MAX. Aðgerðir: +, -, *, /
+	
+Er hægt að útfæra hugræn gagnatög í C++?
+	Skipting á milli interface (skil) og implementation (útfærsla)
+	Private members
+	Public functions
+	Private helper functions
+
+Kostir við ADT?
+	Breytingar
+	Skipting á milli forritara
+
+Forrita hugræna gagnatagið Month
+Forrita hugræna gagnatagið Set
+
+
+
+
