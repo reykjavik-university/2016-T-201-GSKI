@@ -48,7 +48,7 @@ void Month::previousMonth() {
 }
 
 
-ostream& operator<<(ostream& out, Month& month) {
+ostream& operator<<(ostream& out, const Month& month) {
     out << month._mnum;
 
     return out;

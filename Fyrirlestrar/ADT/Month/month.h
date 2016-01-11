@@ -13,7 +13,7 @@ class Month
         void nextMonth();
         void previousMonth();
 
-        friend ostream& operator<<(ostream& out, Month& month);
+        friend ostream& operator<<(ostream& out, const Month& month);
 
     protected:
     private:
