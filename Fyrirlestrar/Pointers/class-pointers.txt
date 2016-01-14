@@ -1,0 +1,57 @@
+Hvað er bendir?
+	Breyta sem getur geymt vistfang á annarri breytu
+
+Skilgreing á bendi
+	int* p;
+	double* p;
+
+Vistfangsvirkinn
+	
+	int* p1;
+	int v1;
+	
+	p1 = &v1;
+	
+	p1 geymir núna vistfangið á v1
+
+Dereferencing
+
+	v1 = 0;
+	p1 = &v1;
+	*p1 = 42;
+	cout << v1 << endl;
+	cout << *p1 << end
+
+Gildisveiting
+	int *p1, *p2;
+	int a = 5;
+	
+	p1 = &a;
+	p2 = p1;
+	
+new virkinn
+	int *p1;
+	p1 = new int;	// bendir á nýja nafnlausa (kviklega) breytu
+	Hvernig getum við lesið inn í hana?
+	cin >> *p1
+
+	delete p1
+
+----------
+typedef
+
+bendabreytur og fylki
+
+typedef int* IntPtr;
+IntPtr p;
+int  a[10];
+
+p = a;
+
+
+kvikleg fylki
+d = new double[10];
+
+delete [] d;
+
+

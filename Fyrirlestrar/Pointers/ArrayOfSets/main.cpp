@@ -9,7 +9,7 @@ typedef Set* SetPtr;
 const int NUM_ELEMENTS = 10;
 const int MAX_ELEMENT = 20;
 
-void printSet(Set& set) {
+void printSet(const Set& set) {
     cout << set << endl;
 }
 
@@ -27,7 +27,7 @@ int main()
     cout << "How many sets do you want? ";
     cin >> num;
 
-    Set* mySets = new Set[num];
+    SetPtr mySets = new Set[num];
     for (int i = 0; i < num; i++) {
         generateSet(mySets[i]);
         printSet(mySets[i]);
