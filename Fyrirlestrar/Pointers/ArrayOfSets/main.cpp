@@ -1,24 +1,39 @@
 #include <iostream>
+#include <ctime>    // for time
+#include <cstdlib>  // for rand
 #include "set.h"
 using namespace std;
 
+typedef Set* SetPtr;
+
+const int NUM_ELEMENTS = 10;
+const int MAX_ELEMENT = 20;
+
+void printSet(const Set& set) {
+    cout << set << endl;
+}
+
+void generateSet(Set& set) {
+    for (int i = 0; i < NUM_ELEMENTS; i++) {
+        int val = rand() % MAX_ELEMENT;
+        set.insert(val);
+    }
+}
+
 int main()
 {
-    Set mySet;
+    srand(time(0)); // Seed the pseudo-random generator
+    int num;
+    cout << "How many sets do you want? ";
+    cin >> num;
 
-    for (int i = 0; i < 10; i++) {
-        mySet.insert(i);
-        mySet.insert(i);
+    SetPtr mySets = new Set[num];
+    for (int i = 0; i < num; i++) {
+        generateSet(mySets[i]);
+        printSet(mySets[i]);
     }
 
-    if (mySet.exist(4))
-        cout << "Element exists!" << endl;
-
-    mySet.remove(4);
-    mySet.remove(7);
-    mySet.remove(12);
-
-    cout << mySet << endl;
+    delete [] mySets;
 
     return 0;
 }
