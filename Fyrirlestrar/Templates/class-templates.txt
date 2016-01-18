@@ -1,0 +1,7 @@
+Hver er tilgangurinn með sniðmátum (e. templates):
+
+	Templates are the foundation of generic programming, which involves writing code in a way that is 
+	independent of any particular type.
+
+Function templates - sniðmátsföll
+Class templates - sniðmátsklasar
