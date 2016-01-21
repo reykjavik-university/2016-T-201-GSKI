@@ -1,5 +1,7 @@
 bin/
 obj/
+*.exe
+*.o
 *.zip
 *.ppt
 *.doc
