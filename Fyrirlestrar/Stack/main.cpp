@@ -45,8 +45,10 @@ int main( )
     cout << "Contents of first stack after pop(): " << s;
 
     cout << "Contents of copy before calling test2: " << s2;
+
     test2(s2);
     cout << "Contents of copy after calling test2: " << s2;
+
 
     return 0;
 }
