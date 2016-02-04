@@ -19,7 +19,7 @@ class Queue
         T remove();               // Returns the front element and removes it
         Node<T>* getFront() const; // The front node
 
-        void operator =(const Queue<T>& aQueue);
+        Queue<T>& operator =(const Queue<T>& aQueue);
 
         // A friend function for writing the contents of aStack to an output stream
         template <typename U>

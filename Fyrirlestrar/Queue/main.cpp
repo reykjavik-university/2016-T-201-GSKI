@@ -39,12 +39,12 @@ int main( )
 
     cout << "Contents of first queue: " << q1;
 
-    /*
+
     Queue<char> q3;
     q3 = q2 = q1;
     cout << "Contents of third queue: " << q3;
     cout << "Size of third queue: " << q3.size() << endl;
-    */
+
 
     return 0;
 }
