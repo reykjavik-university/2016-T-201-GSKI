@@ -5,6 +5,10 @@
 using namespace std;
 using namespace employeessavitch;
 
+void test(Employee e) {
+    e.print_check();
+}
+
 int main()
 {
     HourlyEmployee joe;
@@ -20,6 +24,8 @@ int main()
     SalariedEmployee boss("Mr. Big Shot", "987-65-4321", 10500.50);
     cout << "Check for " << boss.get_name( ) << endl;
     boss.print_check( );
+
+    test(joe);
 
     return 0;
 }

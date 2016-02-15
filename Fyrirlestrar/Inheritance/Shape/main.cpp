@@ -4,6 +4,9 @@ using namespace std;
 
 int main ()
 {
+    Shape s;
+    s.area();
+
 	Rectangle rect;
 	Triangle tri;
 	rect.set_data (5,3);
