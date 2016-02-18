@@ -5,7 +5,7 @@ enum Note {middleC, Csharp, Cflat};
 
 class Instrument {
     public:
-        void play(Note theNote) const
+        virtual void play(Note theNote) const
         {
                 cout << "Instrument::play" << endl;
         }

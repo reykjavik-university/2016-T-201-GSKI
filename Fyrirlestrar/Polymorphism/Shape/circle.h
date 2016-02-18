@@ -3,10 +3,11 @@
 
 #include "shape.h"
 
+const double PI = 3.14159;
+
 class Circle : public Shape
 {
 public:
-    static const double PI = 3.14159;
 	Circle(double r) { radius = r; }
 	double area()
 	{

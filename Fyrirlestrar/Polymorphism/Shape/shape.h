@@ -6,7 +6,7 @@ class Shape //Base class
 {
 public:
 	Shape() {}
-	double area() { return 0; }
+	virtual double area() { return 0; }
 };
 
 #endif // SHAPE_H
