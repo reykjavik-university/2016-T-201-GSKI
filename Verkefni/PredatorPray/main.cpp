@@ -1,10 +1,11 @@
 #include <iostream>
+#include <ctime>    // for time
 #include "World.h"
 using namespace std;
 
 int main()
 {
-    World myWorld;
+    World myWorld(time(0));
 
     myWorld.display();
 
