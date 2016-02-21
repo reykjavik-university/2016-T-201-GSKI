@@ -21,6 +21,12 @@ bool Organism::hasMoved() const {  // has the organism moved or not?
     return moved;
 }
 
+// Makes a random move by calling movesTo().  Called by move() in the subclasses
+void Organism::moveRandomly()    
+{
+        /*** You have to implement this function ***/   
+}
+
 void Organism::movesTo(int xNew, int yNew) // moves the organism from coordinates (x,y) to (xNew,yNew)
 {
         /*** You have to implement this function ***/

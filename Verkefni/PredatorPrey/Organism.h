@@ -36,7 +36,11 @@ class Organism {
         // Generates an offspring at the given position.
         virtual void generateOffspring(int whereX, int whereY) = 0;
 
+        // Makes a random move, called by move()
+        void moveRandomly();
+
         // Moves this organism from coordinates (x,y) to (xNew,yNew).
+        // Called by moveRandomly();
         void movesTo(int xNew, int yNew);
 
         // Breeds a new organism at an adjacent cell. Tries to produce one new
