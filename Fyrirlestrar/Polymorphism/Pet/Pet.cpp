@@ -44,8 +44,8 @@ int main()
 
     //The following, which accesses member variables directly
     //rather than via virtual functions, would produce an error:
-     cout << "name: " << ppet->name << "  breed: "
-         << ppet->breed << endl;
+    //cout << "name: " << ppet->name << "  breed: "
+    //     << ppet->breed << endl;
     //generates an error message: 'class Pet' has no member
     //named 'breed' .
     //See Pitfall section "Not Using Virtual Member Functions"
@@ -63,5 +63,5 @@ void Dog::print()
 void Pet::print()
 
 {
-    cout << "name: " << endl;//Note no breed mentioned
+    cout << "name: " << name << endl; //Note no breed mentioned
 }
