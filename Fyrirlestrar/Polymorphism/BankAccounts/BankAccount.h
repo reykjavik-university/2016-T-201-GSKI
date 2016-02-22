@@ -7,6 +7,12 @@ using namespace std;
 class BankAccount
 {
     public:
+        BankAccount(string n, double b);
+        string getName() const;
+        double getBalance() const;
+
+        bool virtual withdraw(double amount);
+        bool deposit(double amount);
 
         friend ostream& operator <<(ostream& outs, BankAccount& account);
     protected:
