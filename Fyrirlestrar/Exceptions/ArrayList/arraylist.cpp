@@ -50,8 +50,10 @@ void ArrayList<T>::insert(T elem) {
 }
 
 template <class T>
-T ArrayList<T>::remove() {
-    assert(currElemPos >=0 && currElemPos < currSize); // No current element
+T ArrayList<T>::remove() throw (ArrayListException) {
+    if (currElemPos < 0 || currElemPos >= currSize) // No current element
+        throw ArrayListException("No current element");
+
     T elem = arr[currElemPos];
     for (int i = currElemPos; i < currSize - 1; i++)    // Shift to left
         arr[i] = arr[i+1];
@@ -83,8 +85,10 @@ void ArrayList<T>::moveToEnd() {
 }
 
 template <class T>
-void ArrayList<T>::moveToPos(int pos) {
-    assert ((pos>=0 && (pos <= currSize)));
+void ArrayList<T>::moveToPos(int pos) throw (ArrayListException) {
+    if (pos < 0 || pos > currSize)
+        throw ArrayListException("Illegal position");
+
     currElemPos = pos;
 }
 
@@ -99,8 +103,9 @@ int ArrayList<T>::currPos() const {
 }
 
 template <class T>
-T ArrayList<T>::value() const {
-    assert(currElemPos >=0 && currElemPos < currSize); // No current element
+T ArrayList<T>::value() const throw (ArrayListException) {
+    if (currElemPos < 0 || currElemPos >= currSize) // No current element
+        throw ArrayListException("No current element");
     return arr[currElemPos];
 }
 

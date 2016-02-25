@@ -21,16 +21,15 @@ int main()
     try
     {
        quotient = safe_divide(numerator, denominator);
+       cout << numerator << "/" << denominator
+         << " = " << quotient << endl;
     }
     catch(DivideByZero)
     {
          cout << "Error: Division by zero!\n"
               << "Program aborting.\n";
-         exit(0);
+         //exit(0);
     }
-
-    cout << numerator << "/" << denominator
-         << " = " << quotient << endl;
 
     cout << "End of program.\n";
     return 0;

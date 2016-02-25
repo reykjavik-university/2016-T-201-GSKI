@@ -36,24 +36,41 @@ void testList(ArrayList<T>& theList) {
 
     theList.next();
     theList.next();
-    theList.remove();
+    try
+    {
+        theList.remove();
+    }
+    catch (ArrayListException e) {
+        cout << e.getMessage() << endl;
+    }
     print(theList);
 
     theList.moveToEnd();
     theList.prev();
     T lastElem = theList.value();
 
-    int pos = theList.length() / 2;
-    theList.moveToPos(pos);
-    theList.insert(firstElem);
-    theList.moveToPos(++pos);
-    theList.insert(lastElem);
-    print(theList);
+    try {
+        int pos = theList.length() / 2;
+        //int pos = theList.length()+1;
+        theList.moveToPos(pos);
+        theList.insert(firstElem);
+        theList.moveToPos(++pos);
+        theList.insert(lastElem);
+        print(theList);
+    }
+    catch (ArrayListException e) {
+        cout << e.getMessage() << endl;
+    }
 
-    theList.moveToStart();
-    cout << theList.value() << endl;
-    theList.prev();
-    cout << theList.value() << endl;
+    try {
+        theList.moveToStart();
+        cout << theList.value() << endl;
+        theList.prev();
+        cout << theList.value() << endl;
+    }
+    catch (ArrayListException e) {
+        cout << e.getMessage() << endl;
+    }
 
     theList.moveToEnd();
     theList.prev();
@@ -75,9 +92,9 @@ int main()
     ArrayList<int> myIntList(initialSize);
     testList(myIntList);
 
-    initialSize = readNum();
-    ArrayList<string> myStringList(initialSize);
-    testList(myStringList);
+    //initialSize = readNum();
+    //ArrayList<string> myStringList(initialSize);
+    //testList(myStringList);
 
     return 0;
 }

@@ -1,6 +1,17 @@
 #ifndef ARRAYLIST_H
 #define ARRAYLIST_H
 
+#include <string>
+using namespace std;
+
+class ArrayListException {
+public:
+    ArrayListException(string m) : message(m) {}
+    string getMessage() const { return message;};
+private:
+    string message;
+};
+
 template <class T>
 class ArrayList
 {
@@ -12,14 +23,14 @@ class ArrayList
         void moveToStart();         // Set the current position to the start of the list
         int currPos() const;        // Returns the position of the current element
         int length() const;         // Returns the current length of the list
-        T value() const;            // Returns the current element
+        T value() const throw (ArrayListException); // Returns the current element
 
         void clear();               // Clears the contents of the list
         void moveToEnd();           // Sets the current position to the end of the list
-        void moveToPos(int pos);    // Sets the current position to pos
+        void moveToPos(int pos) throw (ArrayListException);    // Sets the current position to pos
         void prev();                // Moves the current position on step left
         void insert (T elem);       // Inserts an element at the current position
-        T remove();                 // Removes and return the current element
+        T remove() throw (ArrayListException); // Removes and return the current element
 
 
     protected:
