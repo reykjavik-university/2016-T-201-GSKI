@@ -51,6 +51,13 @@ public:
                 node = node->next;
             return (*this);
         }
+
+        QueueIterator operator++(int) {
+            QueueIterator result(*this);
+            ++(*this);
+            return result;
+        }
+
     private:
         Node* node;
     };

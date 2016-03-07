@@ -21,5 +21,16 @@ int main()
         cout << "*it = " << *it << endl;
     }
 
+    cout << endl;
+    it = q.begin();
+    ++(++it);
+    cout << *it << endl;
+
+    cout << endl;
+    it = q.begin();
+    it2 = it++;
+    cout << *it << endl;
+    cout << *it2 << endl;
+
     return 0;
 }
