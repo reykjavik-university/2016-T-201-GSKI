@@ -12,14 +12,14 @@ int main() {
     bst.insert(18);
     bst.insert(3);
     bst.insert(7);
-    bst.insert(7);  // Should not have any affect!
+    bst.insert(7);  // Should not have any effect!
     bst.insert(17);
     bst.insert(20);
     bst.insert(2);
     bst.insert(4);
     bst.insert(13);
     bst.insert(9);
-    bst.insert(9);  // Should not have any affect!
+    bst.insert(9);  // Should not have any effect!
 
     /* bst then looks like this:
                   15
@@ -35,6 +35,7 @@ int main() {
 
     cout << "The height of the BST is: " << bst.height() << endl;
     cout << "The number of nodes in the BST is: " << bst.size() << endl;
+    cout << "The item at the root is now: " << (bst.getRoot())->item << endl;
 
     cout << "Inorder: ";
     bst.inorder();
