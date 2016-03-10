@@ -7,6 +7,19 @@ using namespace std;
 // and returns a list (as the function result) of the tops of the stacks in the list.
 // The top values are to be returned in the same order as they were on the stacks.
 
+template <class T>
+list<T> tops(list<stack<T>>& stackList) {
+    list<T> result;
+
+    typename list<stack<T>>::iterator it;
+
+    for (it = stackList.begin(); it != stackList.end(); it++) {
+        //result.push_back((*it).top());    // Same as below
+        result.push_back(it->top());
+    }
+    return result;
+}
+
 int main()
 {
     stack<int> s1, s2, s3;
