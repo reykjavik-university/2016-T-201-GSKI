@@ -1,0 +1,53 @@
+Printing empty list:
+
+Now reading list data:
+5
+1 2 3 4 5
+
+List length is: 5
+1
+2
+3
+4
+5
+
+Removed element: 3
+List length is: 4
+Current element: 4
+1
+2
+4
+5
+
+Last element: 5
+List length is: 6
+1
+2
+1
+5
+4
+5
+
+Last element: 5
+1
+1
+1
+2
+1
+5
+4
+5
+5
+
+The list is empty
+List length is: 2
+1
+5
+
+Copying list:
+1
+5
+
+Clear original list; should not affect the copy:
+1
+5

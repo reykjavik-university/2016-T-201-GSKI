@@ -1,0 +1,42 @@
+Printing empty list:
+
+Now reading list data:
+3
+1 2 3
+
+List length is: 3
+1
+2
+3
+
+Removed element: 3
+List length is: 2
+value(): Invalid current node!
+Last element: 2
+List length is: 4
+1
+1
+2
+2
+
+Last element: 2
+1
+1
+1
+1
+2
+2
+2
+
+The list is empty
+List length is: 2
+1
+2
+
+Copying list:
+1
+2
+
+Clear original list; should not affect the copy:
+1
+2

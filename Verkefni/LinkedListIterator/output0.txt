@@ -1,0 +1,8 @@
+Printing empty list:
+
+Now reading list data:
+0
+
+List length is: 0
+
+value(): Invalid current node!
