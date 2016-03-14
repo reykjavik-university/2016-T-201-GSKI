@@ -8,8 +8,8 @@ template <class T>
 class Node
 {
     public:
-        // Constructs a new node
-        Node() {};
+        // Constructs a new node with default value
+        Node() : data(T()) {};
         // Constructs a new node with a value, next and previous links
         Node(T value, Node *nextLink, Node* prevLink) : data(value), next(nextLink), prev(prevLink) {};
 
