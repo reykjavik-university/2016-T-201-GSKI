@@ -23,7 +23,7 @@ int main( )
 
     cout << "Entry for Mercury - " << planets["Mercury"]
             << endl << endl;
-	
+
     if (planets.find("Mercury") != planets.end( ))
         cout << "Mercury is in the map." << endl;
     if (planets.find("Ceres") == planets.end( ))

@@ -20,13 +20,13 @@ int main( )
     cout << "The set contains:\n";
     set<char>::const_iterator p;
     for (p = s.begin( ); p != s.end( ); p++)
-    cout << *p << " ";
+        cout << *p << " ";
     cout << endl;
 
     cout << "Removing C.\n";
     s.erase('C');
     for (p = s.begin( ); p != s.end( ); p++)
-    cout << *p << " ";
+        cout << *p << " ";
     cout << endl;
 
     return 0;

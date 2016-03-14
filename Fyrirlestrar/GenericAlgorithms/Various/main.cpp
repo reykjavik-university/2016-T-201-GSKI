@@ -14,6 +14,16 @@ bool greaterThanFive(int i) {
     return i > 5;
 }
 
+template <class I, class P, class T>
+void myReplace_if(I first, I last, P pred, const T& newValue) {
+
+    while (first != last) {
+        if (pred(*first))
+            *first = newValue;
+        ++first;
+    }
+}
+
 int main()
 {
     const int MAX = 10;
@@ -40,7 +50,7 @@ int main()
 
     cout << SEARCH << " is found " << count(v2.begin(), v2.end(), SEARCH) << " times in vector v2" << endl;
 
-    replace_if(v2.begin(), v2.end(), greaterThanFive, 100);
+    myReplace_if(v2.begin(), v2.end(), greaterThanFive, 100);
     display(v2);
 
     random_shuffle(v1.begin(), v1.end());
