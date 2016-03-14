@@ -9,7 +9,7 @@ class Book
 {
  public:
 	Book();
-	Book(string author, string title, string date);
+	Book(string anAuthor, string aTitle, string aDate);
 	string getAuthor() const;
 	string getTitle() const;
 	string getDate() const;
