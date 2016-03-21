@@ -15,6 +15,31 @@ void removeFromQueue(PriorityQueue<E,C> q) {
     }
 }
 
+template <class E>
+void displayList(list<E>& l) {
+    typename list<E>::const_iterator it;
+    for (it=l.begin(); it != l.end(); it++)
+        cout << *it << " ";
+    cout << endl;
+}
+
+template <class E>
+void sortList(list<E>& l) {
+    PriorityQueue<E,less<E>> q;
+
+    while(!l.empty()) {
+        E elem = l.front();
+        l.pop_front();
+        q.insert(elem);
+    }
+
+    while(!q.empty()) {
+        E elem = q.min();
+        q.removeMin();
+        l.push_back(elem);
+    }
+}
+
 
 int main()
 {
@@ -35,6 +60,13 @@ int main()
     removeFromQueue(q2);
     cout << endl;
 
+    list<int> lis;
+    for (int i = 20; i >= 0; i--)
+        lis.push_back(i);
+    displayList(lis);
+
+    sortList(lis);
+    displayList(lis);
 
     return 0;
 }
