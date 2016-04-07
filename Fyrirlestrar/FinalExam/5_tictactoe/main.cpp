@@ -70,8 +70,8 @@ void print_menu()
 int main()
 {
     TicTacToe *ttt = new TicTacToe();
-    Player cp1(ttt, false), cp2(ttt, false);
-    Player hp1(ttt, true), hp2(ttt, true);
+    ComputerPlayer cp1(ttt), cp2(ttt);
+    HumanPlayer hp1(ttt), hp2(ttt);
 
     print_menu();
 

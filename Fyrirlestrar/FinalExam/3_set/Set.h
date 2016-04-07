@@ -47,9 +47,9 @@ class Set
 
     private:
         NodePtr root;
-        int teljari;
-
-
+        void insertAt(NodePtr &node, int n);
+        void inorder(NodePtr node) const;
+        int removeMinFrom(NodePtr &node);
 };
 
 #endif

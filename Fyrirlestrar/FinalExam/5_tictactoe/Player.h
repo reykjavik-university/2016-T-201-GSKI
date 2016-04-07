@@ -6,24 +6,29 @@
 class Player
 {
     public:
-        Player(TicTacToe* ttt, bool human);
-        void make_move();
+        Player(TicTacToe* ttt);
+        virtual void make_move() = 0;
 
         int wins;
         int losses;
         int draws;
 
-    private:
+    protected:
         TicTacToe* ttt;
-        bool human;
 };
 
-class HumanPlayer
+class HumanPlayer : public Player
 {
+    public:
+        HumanPlayer(TicTacToe* ttt);
+        void make_move();
 };
 
-class ComputerPlayer
+class ComputerPlayer : public Player
 {
+    public:
+        ComputerPlayer(TicTacToe* ttt);
+        void make_move();
 };
 
 #endif
